@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>708</width>
+    <height>495</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_connect_1">
+         <property name="text">
+          <string>未连接</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="pushButton_connect_1">
+         <property name="text">
+          <string>连接赤道仪</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_connect_2">
+         <property name="text">
+          <string>未连接</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButton_connect_2">
+         <property name="text">
+          <string>连接相机</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLineEdit" name="lineEdit_longitude"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="pushButton_longitude">
+         <property name="text">
+          <string>设置经度</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="lineEdit_latitude"/>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="pushButton_latitude">
+         <property name="text">
+          <string>设置纬度</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_longitude">
+         <property name="text">
+          <string>经度未设置</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="label_latitude">
+         <property name="text">
+          <string>纬度未设置</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLineEdit" name="lineEdit_threshold">
+         <property name="placeholderText">
+          <string>偏差阈值（度）</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QPushButton" name="pushButton_threshold">
+         <property name="text">
+          <string>设置偏差阈值</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_threshold">
+         <property name="text">
+          <string>偏差阈值未设置</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLabel" name="label_timezone">
+         <property name="text">
+          <string>当前时区：UTC+08:00</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLineEdit" name="lineEdit_timezone">
+         <property name="placeholderText">
+          <string>时区（如 +8 / +08:00 / -5）</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QPushButton" name="pushButton_timezone">
+         <property name="text">
+          <string>设置时区</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_clock">
+         <property name="text">
+          <string>当前时间：----</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="SkyTrackWidget" name="widget_sky" native="true"/>
+         </item>
+         <item>
+          <widget class="MapTrackWidget" name="widget_map" native="true"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QTableWidget" name="tableWidget">
+             <property name="minimumSize">
+              <size>
+               <width>330</width>
+               <height>0</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QCheckBox" name="checkBox_virtual">
+               <property name="text">
+                <string>模拟追踪模式</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBox_pretrack">
+               <property name="text">
+                <string>预备跟踪模式</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_time">
+               <property name="text">
+                <string>时间未知</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="1">
+              <widget class="QPushButton" name="pushButton_up">
+               <property name="text">
+                <string>上</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="pushButton_left">
+               <property name="text">
+                <string>左</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QPushButton" name="pushButton_right">
+               <property name="text">
+                <string>右</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QPushButton" name="pushButton_down">
+               <property name="text">
+                <string>下</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_speed">
+               <property name="text">
+                <string>速度未知</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="pushButton_stop">
+               <property name="text">
+                <string>停止</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QSlider" name="horizontalSlider">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <widget class="QLabel" name="label_tle">
+                 <property name="text">
+                  <string>TLE未知</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_tle2">
+                 <property name="text">
+                  <string>TLE未知</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_id">
+                 <property name="text">
+                  <string>卫星ID未知</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_speed_star">
+                 <property name="text">
+                  <string>卫星速度未知</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_ra">
+                 <property name="text">
+                  <string>赤经未知</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_dec">
+                 <property name="text">
+                  <string>赤纬未知</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <widget class="QCheckBox" name="checkBox_ot_up">
+                 <property name="text">
+                  <string>翻转上下TLE</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_ot_right">
+                 <property name="text">
+                  <string>翻转左右TLE</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_up">
+                 <property name="text">
+                  <string>翻转上下速度</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_down">
+                 <property name="text">
+                  <string>翻转左右速度</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QDateTimeEdit" name="dateTimeEdit_start"/>
+             </item>
+             <item>
+              <widget class="QDateTimeEdit" name="dateTimeEdit_end"/>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_mag_limit">
+               <item>
+                <widget class="QLabel" name="label_mag_limit">
+                 <property name="text">
+                  <string>最低亮度</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_mag_limit">
+                 <item>
+                  <property name="text">
+                   <string>3.0</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>3.5</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>4.0</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>4.5</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>5.0</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBox_fetch_dawn">
+               <property name="text">
+                <string>凌晨模式（默认傍晚）</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_seek">
+               <property name="text">
+                <string>开始搜索</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_local_tle1">
+               <property name="placeholderText">
+                <string>本地TLE第一行</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_local_tle2">
+               <property name="placeholderText">
+                <string>本地TLE第二行</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+             <widget class="QPushButton" name="pushButton_use_tle">
+               <property name="text">
+                <string>使用本地TLE跟踪</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_stellarium">
+               <property name="text">
+                <string>Stellarium 模拟</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SkyTrackWidget</class>
+   <extends>QWidget</extends>
+   <header>sky_widget</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MapTrackWidget</class>
+   <extends>QWidget</extends>
+   <header>map_widget</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

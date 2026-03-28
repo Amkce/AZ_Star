@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StellariumDialog</class>
+ <widget class="QDialog" name="StellariumDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1060</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Stellarium 联动</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_root">
+   <item>
+    <widget class="QSplitter" name="splitter_main">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <widget class="QWidget" name="widget_left">
+      <layout class="QVBoxLayout" name="verticalLayout_left">
+       <item>
+        <widget class="QLabel" name="label_targets_title">
+         <property name="text">
+          <string>当前已抓取卫星</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="table_targets">
+         <property name="editTriggers">
+          <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+         <column>
+          <property name="text">
+           <string>名称</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>星等</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>起始时间</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>结束时间</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="widget_right">
+      <layout class="QVBoxLayout" name="verticalLayout_right">
+       <item>
+        <layout class="QFormLayout" name="formLayout_info">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_status_title">
+           <property name="text">
+            <string>连接状态</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_status">
+           <property name="text">
+            <string>连接状态：未检查</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_name_title">
+           <property name="text">
+            <string>当前卫星</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="label_name">
+           <property name="text">
+            <string>未选择</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_stellarium_name_title">
+           <property name="text">
+            <string>Stellarium 名称</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="label_stellarium_name">
+           <property name="text">
+            <string>未选择</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_sat_id_title">
+           <property name="text">
+            <string>NORAD ID</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLabel" name="label_sat_id">
+           <property name="text">
+            <string>未选择</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_mag_title">
+           <property name="text">
+            <string>星等</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLabel" name="label_mag">
+           <property name="text">
+            <string>未选择</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_window_title">
+           <property name="text">
+            <string>窗口时间</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLabel" name="label_window">
+           <property name="text">
+            <string>未选择</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_location_title">
+           <property name="text">
+            <string>观测地</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLabel" name="label_location">
+           <property name="text">
+            <string>未设置</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_row1">
+         <item>
+          <widget class="QPushButton" name="button_launch">
+           <property name="text">
+            <string>启动 Stellarium</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_check">
+           <property name="text">
+            <string>检查连接</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_one_click">
+           <property name="text">
+            <string>神秘超绝一键设置</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_row2">
+         <item>
+          <widget class="QPushButton" name="button_write_sat">
+           <property name="text">
+            <string>写入/更新卫星</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_sync_location">
+           <property name="text">
+            <string>同步观测地</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_sync_start">
+           <property name="text">
+            <string>跳到起始时刻</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_focus">
+           <property name="text">
+            <string>定位到卫星</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_row3">
+         <item>
+          <widget class="QLabel" name="label_rate_title">
+           <property name="text">
+            <string>回放倍率</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="combo_rate">
+           <item>
+            <property name="text">
+             <string>1x</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>10x</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>30x</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>60x</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>120x</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_play">
+           <property name="text">
+            <string>开始模拟</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_pause">
+           <property name="text">
+            <string>暂停模拟</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_realtime">
+           <property name="text">
+            <string>恢复实时</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPlainTextEdit" name="text_tle">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string>TLE</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPlainTextEdit" name="text_log">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string>联动日志</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

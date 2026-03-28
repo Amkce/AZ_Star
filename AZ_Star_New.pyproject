@@ -1,0 +1,12 @@
+{
+    "files": [
+        "form.ui",
+        "map_widget.py",
+        "sky_widget.py",
+        "star_main.py",
+        "stellarium_panel.py",
+        "stellarium_panel.ui",
+        "stellarium_panel_ui.py",
+        "ui_form.py"
+    ]
+}
